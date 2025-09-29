@@ -5,8 +5,8 @@
 
 echo "🔄 Waiting for VSCode to be ready..."
 
-# Wait up to 60 seconds for code CLI to be available
-MAX_WAIT=60
+# Wait up to 5 minutes (300 seconds) for code CLI to be available
+MAX_WAIT=300
 WAITED=0
 
 while [ $WAITED -lt $MAX_WAIT ]; do
@@ -14,8 +14,8 @@ while [ $WAITED -lt $MAX_WAIT ]; do
         echo "✅ VSCode is ready!"
         break
     fi
-    sleep 2
-    WAITED=$((WAITED + 2))
+    sleep 10
+    WAITED=$((WAITED + 10))
     echo "   Waiting... ($WAITED/$MAX_WAIT seconds)"
 done
 
@@ -32,8 +32,6 @@ echo "📦 Installing VSCode extensions..."
 EXTENSIONS=(
     "anthropic.claude-code"
     "openai.chatgpt"
-    "github.copilot"
-    "github.copilot-chat"
     "ms-playwright.playwright"
     "rangav.vscode-thunder-client"
     "humao.rest-client"
@@ -43,12 +41,8 @@ EXTENSIONS=(
     "usernamehw.errorlens"
     "streetsidesoftware.code-spell-checker"
     "esbenp.prettier-vscode"
-    "dbaeumer.vscode-eslint"
     "ms-python.python"
     "eamodio.gitlens"
-    "mhutchie.git-graph"
-    "wayou.vscode-todo-highlight"
-    "gruntfuggly.todo-tree"
 )
 
 for ext in "${EXTENSIONS[@]}"; do

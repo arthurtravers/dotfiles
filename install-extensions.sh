@@ -26,8 +26,6 @@ echo "━━━━━━━━━━━━━━━━━━━━━━━━�
 declare -a EXTENSIONS=(
     "anthropic.claude-code:Claude for VS Code"
     "openai.chatgpt:ChatGPT"
-    "github.copilot:GitHub Copilot"
-    "github.copilot-chat:GitHub Copilot Chat"
     "ms-playwright.playwright:Playwright Test"
     "rangav.vscode-thunder-client:Thunder Client"
     "humao.rest-client:REST Client"
@@ -37,12 +35,8 @@ declare -a EXTENSIONS=(
     "usernamehw.errorlens:Error Lens"
     "streetsidesoftware.code-spell-checker:Spell Checker"
     "esbenp.prettier-vscode:Prettier"
-    "dbaeumer.vscode-eslint:ESLint"
     "ms-python.python:Python"
     "eamodio.gitlens:GitLens"
-    "mhutchie.git-graph:Git Graph"
-    "wayou.vscode-todo-highlight:TODO Highlight"
-    "gruntfuggly.todo-tree:Todo Tree"
 )
 
 TOTAL=${#EXTENSIONS[@]}
