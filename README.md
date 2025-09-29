@@ -25,12 +25,29 @@ When you create ANY GitHub Codespace with this dotfiles setup:
 - **Codex**: OpenAI's code completion tool
 
 ### MCP Servers Included
-- **Core**: Memory, Sequential Thinking, Filesystem, Fetch
-- **Cloud Services**: Supabase, Netlify, Vercel, Sentry
-- **Search & Data**: Brave Search, Context7
-- **Automation**: Playwright (headless browser)
-- **Analytics**: Google Analytics MCP
-- **Development**: GitHub, Hugging Face, Everything (testing)
+
+#### Core Tools
+- **[Memory](https://github.com/modelcontextprotocol/servers/tree/main/src/memory)** - Long-term memory storage for context
+- **[Sequential Thinking](https://github.com/modelcontextprotocol/servers/tree/main/src/sequential-thinking)** - Chain of thought reasoning
+- **[Filesystem](https://github.com/modelcontextprotocol/servers/tree/main/src/filesystem)** - File system operations
+- **[Fetch](https://github.com/ModelContextProtocol/servers/tree/main/src/fetch)** - Web fetching capabilities
+
+#### Cloud Services
+- **[Supabase](https://github.com/supabase/mcp-server-supabase)** - Database and authentication
+- **[Netlify](https://github.com/netlify/mcp-server-netlify)** - Deployment and hosting
+- **[Vercel](https://github.com/vercel/mcp)** - Deployment platform integration
+- **[Sentry](https://github.com/sentry/mcp-server-sentry)** - Error tracking and monitoring
+
+#### Search & Data
+- **[Brave Search](https://github.com/modelcontextprotocol/servers/tree/main/src/brave-search)** - Web search capabilities
+- **[Context7](https://github.com/Upstash/context7-mcp)** - Documentation retrieval
+
+#### Automation & Development
+- **[Playwright](https://github.com/Playwright/mcp-server-playwright)** - Browser automation (headless Chrome)
+- **[GitHub](https://github.com/modelcontextprotocol/servers/tree/main/src/github)** - GitHub API integration
+- **[Hugging Face](https://github.com/cloudflare/hf-mcp-server)** - ML model hub access
+- **[Analytics](https://github.com/hannesrudolph/analytics-mcp)** - Google Analytics integration
+- **[Everything](https://github.com/modelcontextprotocol/servers/tree/main/src/everything)** - Testing server for MCP features
 
 ## 📋 Prerequisites
 
@@ -59,11 +76,15 @@ Go to [github.com/settings/codespaces](https://github.com/settings/codespaces) a
 - `CLAUDE_ORG_NAME` - Your Claude organization name
 - `CLAUDE_DISPLAY_NAME` - Your display name
 
+> 💡 **How to get Claude tokens**: Run `claude login` locally, then check `~/.claude.json` for these values
+
 #### Codex Authentication (Auto-login)
 - `CODEX_ID_TOKEN` - Your Codex ID token
 - `CODEX_ACCESS_TOKEN` - Your Codex access token
 - `CODEX_REFRESH_TOKEN` - Your Codex refresh token
 - `CODEX_ACCOUNT_ID` - Your Codex account ID
+
+> 💡 **How to get Codex tokens**: Run `codex login` locally, then check `~/.codex/auth.json` for these values
 
 #### MCP Server API Keys (As Needed)
 - `SUPABASE_ACCESS_TOKEN` - Supabase access token
@@ -155,9 +176,16 @@ If a repository already has `.devcontainer`, this setup automatically skips to a
 
 ## 📚 Resources
 
+### Documentation
 - [Claude Code Documentation](https://docs.claude.com/claude-code)
 - [MCP Protocol Spec](https://modelcontextprotocol.io)
 - [GitHub Codespaces Docs](https://docs.github.com/codespaces)
+- [GitHub Dotfiles Guide](https://docs.github.com/en/codespaces/customizing-your-codespace/personalizing-github-codespaces-for-your-account#dotfiles)
+
+### MCP Server Repositories
+- [Official MCP Servers Collection](https://github.com/modelcontextprotocol/servers)
+- [Awesome MCP Servers](https://github.com/punkpeye/awesome-mcp-servers) - Community curated list
+- [MCP Hub](https://hub.mcp.io) - Discover more MCP servers
 
 ## 📄 License
 
