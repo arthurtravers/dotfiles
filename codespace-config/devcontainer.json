@@ -1,15 +1,65 @@
 {
-  "name": "Dev with Claude Code, Codex & MCP",
+  "name": "AI-Powered Dev with Claude, ChatGPT & MCP",
   "image": "mcr.microsoft.com/devcontainers/python:3.11-node",
 
   "features": {
     "ghcr.io/devcontainers/features/github-cli:1": {},
-    "ghcr.io/devcontainers/features/python:1": {}
+    "ghcr.io/devcontainers/features/python:1": {},
+    "ghcr.io/devcontainers/features/docker-in-docker:2": {}
   },
 
   "postCreateCommand": "bash .devcontainer/setup.sh",
 
-  "forwardPorts": [3000, 3001, 5173, 8080, 8000],
+  "forwardPorts": [3000, 3001, 4000, 5000, 5173, 5174, 8000, 8080, 8081],
 
-  "remoteUser": "vscode"
+  "remoteUser": "vscode",
+
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        // AI Assistants - The main attractions!
+        "anthropic.claude-code",           // Claude for VS Code
+        "openai.chatgpt",                  // ChatGPT official extension
+        "github.copilot",                  // GitHub Copilot
+        "github.copilot-chat",             // GitHub Copilot Chat
+
+        // Development Tools
+        "esbenp.prettier-vscode",          // Code formatter
+        "dbaeumer.vscode-eslint",          // JavaScript linter
+        "ms-python.python",                // Python support
+        "ms-python.vscode-pylance",        // Python language server
+
+        // Git & GitHub
+        "eamodio.gitlens",                 // Git supercharged
+        "github.vscode-pull-request-github", // GitHub Pull Requests
+
+        // Productivity
+        "formulahendry.auto-rename-tag",   // Auto rename HTML tags
+        "christian-kohler.path-intellisense", // Path autocomplete
+
+        // Themes & Icons
+        "pkief.material-icon-theme",       // Material icons
+        "github.github-vscode-theme"       // GitHub theme
+      ],
+      "settings": {
+        // Editor settings
+        "editor.fontSize": 14,
+        "editor.formatOnSave": true,
+        "editor.minimap.enabled": true,
+
+        // Terminal settings
+        "terminal.integrated.fontSize": 14,
+        "terminal.integrated.defaultProfile.linux": "bash",
+
+        // Git settings
+        "git.autofetch": true,
+        "git.confirmSync": false,
+
+        // Extension settings
+        "github.copilot.enable": {
+          "*": true
+        }
+      }
+    }
+  }
 }

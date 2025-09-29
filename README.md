@@ -43,9 +43,20 @@ That's it! Your AI coding assistants are ready! 🎉
 
 ## 🤖 What You Get
 
-- **Claude Code** - Explains code, writes features, fixes bugs, answers questions
-- **Codex** - Autocompletes code, generates functions, converts comments to code
-- **15+ Power Tools** - Database connections, web deployment, browser automation, and more
+### AI Assistants (2 Ways to Use!)
+
+#### 🖥️ Terminal (CLI)
+- **Claude Code** (`claude`) - Explains code, writes features, fixes bugs
+- **Codex** (`codex`) - Generates functions, converts comments to code
+
+#### 🎨 VSCode Extensions (GUI)
+- **Claude for VS Code** - Chat with Claude in the sidebar
+- **ChatGPT** - OpenAI's official ChatGPT extension
+- **GitHub Copilot** - AI pair programming as you type
+- **GitHub Copilot Chat** - Ask questions about your code
+
+### 🔧 15+ Power Tools
+Database connections, web deployment, browser automation, and more via MCP servers
 
 ## 💡 Why This Matters
 
@@ -97,8 +108,16 @@ When you create ANY GitHub Codespace with this dotfiles setup:
 ## 🎯 Features
 
 ### AI Tools Included
-- **Claude Code**: Anthropic's AI coding assistant
-- **Codex**: OpenAI's code completion tool
+
+#### Command Line Tools
+- **Claude Code CLI**: Anthropic's AI assistant in your terminal
+- **Codex CLI**: OpenAI's code completion in terminal
+
+#### VSCode Extensions (Auto-Installed!)
+- **Claude for VS Code**: Chat with Claude in the sidebar
+- **ChatGPT**: OpenAI's official extension
+- **GitHub Copilot**: AI autocomplete as you type
+- **GitHub Copilot Chat**: Ask questions about code
 
 ### MCP Servers Included
 
@@ -162,6 +181,10 @@ Go to [github.com/settings/codespaces](https://github.com/settings/codespaces) a
 
 > 💡 **How to get Codex tokens**: Run `codex login` locally, then check `~/.codex/auth.json` for these values
 
+#### VSCode Extension API Keys (Optional)
+- `ANTHROPIC_API_KEY` - For Claude VS Code extension (if not using OAuth)
+- `OPENAI_API_KEY` - For ChatGPT extension (if not using OAuth)
+
 #### MCP Server API Keys (As Needed)
 - `SUPABASE_ACCESS_TOKEN` - Supabase access token
 - `NETLIFY_TOKEN` - Netlify personal access token
@@ -187,8 +210,9 @@ Go to [github.com/settings/codespaces](https://github.com/settings/codespaces) a
 
 ## 🎮 Usage
 
-Once your Codespace is ready:
+Once your Codespace is ready, you have **TWO ways** to use AI:
 
+### Option 1: Terminal (CLI)
 ```bash
 # Use Claude Code
 claude
@@ -198,6 +222,17 @@ codex
 
 # Both are pre-authenticated if you added secrets!
 ```
+
+### Option 2: VSCode Extensions (GUI)
+1. Look for the **Claude icon** in the sidebar (auto-installed)
+2. Look for the **ChatGPT icon** in the sidebar (auto-installed)
+3. **GitHub Copilot** works automatically as you type
+4. Access via Command Palette (`Cmd/Ctrl + Shift + P`)
+
+### 💡 Pro Tip
+- Use **extensions** for visual, interactive chat
+- Use **CLI** for quick terminal commands and automation
+- Both work simultaneously!
 
 ## 📱 Mobile Usage
 

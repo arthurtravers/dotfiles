@@ -11,34 +11,43 @@ if [ "$CODESPACES" != "true" ]; then
     exit 0
 fi
 
-# Get the workspace directory
-WORKSPACE_DIR="/workspaces/${CODESPACE_VSCODE_FOLDER:-$RepositoryName}"
+# Run our setup script directly from dotfiles
+echo "🎯 Running setup script..."
+bash ~/dotfiles/codespace-config/setup.sh
 
-# Check if .devcontainer already exists in the repository
-if [ -d "$WORKSPACE_DIR/.devcontainer" ]; then
-    echo "⚠️  .devcontainer already exists in this repository. Skipping automatic setup to avoid conflicts."
-    echo "💡 Tip: If you want to use the dotfiles configuration, remove the existing .devcontainer folder."
+# Install VSCode extensions if code CLI is available
+if command -v code &> /dev/null; then
+    echo "📦 Installing VSCode extensions..."
+
+    # AI Extensions
+    code --install-extension anthropic.claude-code 2>/dev/null || true
+    code --install-extension openai.chatgpt 2>/dev/null || true
+    code --install-extension github.copilot 2>/dev/null || true
+    code --install-extension github.copilot-chat 2>/dev/null || true
+
+    # Core Development Extensions
+    code --install-extension esbenp.prettier-vscode 2>/dev/null || true
+    code --install-extension dbaeumer.vscode-eslint 2>/dev/null || true
+    code --install-extension ms-python.python 2>/dev/null || true
+    code --install-extension eamodio.gitlens 2>/dev/null || true
+
+    echo "✅ VSCode extensions installed!"
 else
-    echo "📦 Deploying .devcontainer configuration..."
-
-    # Create .devcontainer directory in the workspace
-    mkdir -p "$WORKSPACE_DIR/.devcontainer"
-
-    # Copy configuration files from dotfiles to workspace
-    cp -r ~/dotfiles/codespace-config/* "$WORKSPACE_DIR/.devcontainer/"
-
-    echo "✅ .devcontainer configuration deployed!"
-    echo "🎯 Running setup script..."
-
-    # Run the setup script
-    bash "$WORKSPACE_DIR/.devcontainer/setup.sh"
+    echo "ℹ️ VSCode CLI not found, skipping extension installation"
 fi
 
 echo "🎉 Codespace configuration complete!"
 echo ""
-echo "📝 Available tools:"
-echo "   - Claude Code: type 'claude'"
-echo "   - Codex: type 'codex'"
+echo "📝 Available AI Tools:"
+echo ""
+echo "🖥️ Terminal Commands:"
+echo "   - claude  → Claude Code CLI"
+echo "   - codex   → Codex CLI"
+echo ""
+echo "🎨 VSCode Extensions (in sidebar):"
+echo "   - Claude for VS Code → Chat with Claude"
+echo "   - ChatGPT → OpenAI's ChatGPT"
+echo "   - GitHub Copilot → AI pair programming"
 echo ""
 echo "🔧 MCP Servers configured:"
 echo "   - Memory, Sequential Thinking, Filesystem"
