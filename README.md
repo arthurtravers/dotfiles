@@ -51,9 +51,6 @@ That's it! Your AI coding assistants are ready! 🎉
 
 #### 🎨 VSCode Extensions (GUI)
 - **Claude for VS Code** - Chat with Claude in the sidebar
-- **ChatGPT** - OpenAI's official ChatGPT extension
-- **GitHub Copilot** - AI pair programming as you type
-- **GitHub Copilot Chat** - Ask questions about your code
 
 ### 🔧 15+ Power Tools
 Database connections, web deployment, browser automation, and more via MCP servers
@@ -115,10 +112,10 @@ When you create ANY GitHub Codespace with this dotfiles setup:
 
 #### VSCode Extensions (Auto-Installed!)
 - **Claude for VS Code**: Chat with Claude in the sidebar
-- **ChatGPT**: OpenAI's official extension
-- **GitHub Copilot**: AI autocomplete as you type
-- **GitHub Copilot Chat**: Ask questions about code
 - **Playwright Test**: Run and debug E2E tests
+- **API Testing Tools**: Thunder Client and REST Client
+- **Docker & Dev Containers**: Container management
+- **Code Quality**: Prettier, SonarLint, Error Lens
 
 ### MCP Servers Included
 
@@ -184,7 +181,6 @@ Go to [github.com/settings/codespaces](https://github.com/settings/codespaces) a
 
 #### VSCode Extension API Keys (Optional)
 - `ANTHROPIC_API_KEY` - For Claude VS Code extension (if not using OAuth)
-- `OPENAI_API_KEY` - For ChatGPT extension (if not using OAuth)
 
 #### MCP Server API Keys (As Needed)
 - `SUPABASE_ACCESS_TOKEN` - Supabase access token
@@ -226,9 +222,8 @@ codex
 
 ### Option 2: VSCode Extensions (GUI)
 1. Look for the **Claude icon** in the sidebar (auto-installed)
-2. Look for the **ChatGPT icon** in the sidebar (auto-installed)
-3. **GitHub Copilot** works automatically as you type
-4. Access via Command Palette (`Cmd/Ctrl + Shift + P`)
+2. Access via Command Palette (`Cmd/Ctrl + Shift + P`)
+3. Extensions load automatically in background
 
 ### 💡 Pro Tip
 - Use **extensions** for visual, interactive chat

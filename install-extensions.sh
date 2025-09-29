@@ -25,7 +25,6 @@ echo "━━━━━━━━━━━━━━━━━━━━━━━━�
 # Extension list with descriptions
 declare -a EXTENSIONS=(
     "anthropic.claude-code:Claude for VS Code"
-    "openai.chatgpt:ChatGPT"
     "ms-playwright.playwright:Playwright Test"
     "rangav.vscode-thunder-client:Thunder Client"
     "humao.rest-client:REST Client"

@@ -31,7 +31,6 @@ echo "📦 Installing VSCode extensions..."
 
 EXTENSIONS=(
     "anthropic.claude-code"
-    "openai.chatgpt"
     "ms-playwright.playwright"
     "rangav.vscode-thunder-client"
     "humao.rest-client"

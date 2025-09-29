@@ -17,9 +17,8 @@
   "customizations": {
     "vscode": {
       "extensions": [
-        // AI Assistants - The main attractions!
+        // AI Assistant
         "anthropic.claude-code",           // Claude for VS Code
-        "openai.chatgpt",                  // ChatGPT official extension
 
         // Testing & Automation
         "ms-playwright.playwright",        // Playwright Test for VS Code
@@ -62,12 +61,7 @@
 
         // Git settings
         "git.autofetch": true,
-        "git.confirmSync": false,
-
-        // Extension settings
-        "github.copilot.enable": {
-          "*": true
-        }
+        "git.confirmSync": false
       }
     }
   }
