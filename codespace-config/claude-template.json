@@ -8,9 +8,9 @@
     "organizationName": "CLAUDE_ORG_NAME",
     "displayName": "CLAUDE_DISPLAY_NAME"
   },
-  "claudeCodeFirstTokenDate": "2025-01-01T00:00:00.000Z",
+  "claudeCodeFirstTokenDate": "2024-12-21T00:26:31.926Z",
   "hasCompletedOnboarding": true,
-  "lastOnboardingVersion": "0.0.0",
+  "lastOnboardingVersion": "1.0.0",
   "mcpServers": {
     "memory": {
       "type": "stdio",
