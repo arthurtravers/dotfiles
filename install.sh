@@ -46,11 +46,27 @@ if command -v code &> /dev/null; then
     # Testing & Automation
     code --install-extension ms-playwright.playwright 2>/dev/null || true
 
+    # API Testing
+    code --install-extension rangav.vscode-thunder-client 2>/dev/null || true
+    code --install-extension humao.rest-client 2>/dev/null || true
+
+    # Docker
+    code --install-extension ms-azuretools.vscode-docker 2>/dev/null || true
+    code --install-extension ms-vscode-remote.remote-containers 2>/dev/null || true
+
+    # Security & Quality
+    code --install-extension sonarsource.sonarlint-vscode 2>/dev/null || true
+    code --install-extension usernamehw.errorlens 2>/dev/null || true
+    code --install-extension streetsidesoftware.code-spell-checker 2>/dev/null || true
+
     # Core Development Extensions
     code --install-extension esbenp.prettier-vscode 2>/dev/null || true
     code --install-extension dbaeumer.vscode-eslint 2>/dev/null || true
     code --install-extension ms-python.python 2>/dev/null || true
     code --install-extension eamodio.gitlens 2>/dev/null || true
+    code --install-extension mhutchie.git-graph 2>/dev/null || true
+    code --install-extension wayou.vscode-todo-highlight 2>/dev/null || true
+    code --install-extension gruntfuggly.todo-tree 2>/dev/null || true
 
     echo "✅ VSCode extensions installed!"
 else

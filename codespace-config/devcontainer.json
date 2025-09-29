@@ -26,19 +26,35 @@
         // Testing & Automation
         "ms-playwright.playwright",        // Playwright Test for VS Code
 
+        // API Testing
+        "rangav.vscode-thunder-client",    // Thunder Client - API testing
+        "humao.rest-client",               // REST Client - API requests in .http files
+
         // Development Tools
         "esbenp.prettier-vscode",          // Code formatter
         "dbaeumer.vscode-eslint",          // JavaScript linter
         "ms-python.python",                // Python support
         "ms-python.vscode-pylance",        // Python language server
 
+        // Docker
+        "ms-azuretools.vscode-docker",     // Docker management
+        "ms-vscode-remote.remote-containers", // Dev Containers
+
+        // Security & Quality
+        "sonarsource.sonarlint-vscode",    // Code quality and security
+        "usernamehw.errorlens",            // Inline error messages
+        "streetsidesoftware.code-spell-checker", // Spell checker
+
         // Git & GitHub
         "eamodio.gitlens",                 // Git supercharged
         "github.vscode-pull-request-github", // GitHub Pull Requests
+        "mhutchie.git-graph",              // Git graph visualization
 
         // Productivity
         "formulahendry.auto-rename-tag",   // Auto rename HTML tags
         "christian-kohler.path-intellisense", // Path autocomplete
+        "wayou.vscode-todo-highlight",     // TODO highlighting
+        "gruntfuggly.todo-tree",           // TODO tree view
 
         // Themes & Icons
         "pkief.material-icon-theme",       // Material icons
