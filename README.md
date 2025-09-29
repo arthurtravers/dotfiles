@@ -1,4 +1,80 @@
-# 🚀 Automatic Codespace Configuration
+# 🚀 AI-Powered Coding from Any Device
+
+**Code with AI assistants from your iPhone, iPad, or any browser - no laptop needed!**
+
+## 🌟 What is this?
+
+This setup gives you **two AI coding assistants** (Claude & Codex) that work directly in your browser - even on your phone! Write code, fix bugs, and build apps from anywhere with an internet connection. No expensive computer required.
+
+### 📱 Works Everywhere
+- ✅ **iPhone/Android** - Code from your phone
+- ✅ **iPad/Tablet** - Full development on your tablet
+- ✅ **Any Browser** - Chrome, Safari, Firefox, Edge
+- ✅ **Any Device** - Chromebook, old laptop, work computer
+- ✅ **Anywhere** - Coffee shop, beach, airplane (with wifi)
+
+### 🎯 Perfect For
+- **Students** - No need for expensive laptops
+- **Travelers** - Code from anywhere in the world
+- **Beginners** - AI helps you learn as you code
+- **Professionals** - Emergency fixes from your phone
+- **Anyone** - Who wants AI to write code for them
+
+## ⚡ Quick Start (5 minutes)
+
+### Super Simple Setup:
+1. **Fork this repo** - Click the "Fork" button above
+2. **Name it** `dotfiles` (must be exactly this)
+3. **Enable in GitHub**:
+   - Go to [github.com/settings/codespaces](https://github.com/settings/codespaces)
+   - Check ✅ "Automatically install dotfiles"
+   - Select your `dotfiles` repo
+4. **Create a Codespace** on any project:
+   - Open any GitHub repo
+   - Click green "Code" button
+   - Click "Create codespace"
+5. **Start coding with AI**:
+   ```bash
+   claude   # For Claude AI assistant
+   codex    # For OpenAI Codex
+   ```
+
+That's it! Your AI coding assistants are ready! 🎉
+
+## 🤖 What You Get
+
+- **Claude Code** - Explains code, writes features, fixes bugs, answers questions
+- **Codex** - Autocompletes code, generates functions, converts comments to code
+- **15+ Power Tools** - Database connections, web deployment, browser automation, and more
+
+## 💡 Why This Matters
+
+### Traditional Coding
+- ❌ Need expensive computer ($1000+)
+- ❌ Install complex software
+- ❌ Stuck at your desk
+- ❌ Hours of setup
+- ❌ Write everything yourself
+
+### With This Setup
+- ✅ Use any device with internet
+- ✅ Nothing to install locally
+- ✅ Code from anywhere
+- ✅ Ready in 5 minutes
+- ✅ AI writes code for you
+
+## 🎬 Real Use Cases
+
+- **"Fixed a bug from my iPhone while on the train"**
+- **"Built my startup MVP from a $200 Chromebook"**
+- **"Kids learning to code on the family iPad"**
+- **"Emergency deploy from vacation using hotel WiFi"**
+
+---
+
+# 📖 Full Documentation
+
+## Automatic Codespace Configuration
 
 Automatically configures every GitHub Codespace with **Claude Code**, **Codex**, and **13+ MCP servers** - no manual setup needed!
 
