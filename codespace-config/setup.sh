@@ -2,24 +2,29 @@
 
 echo "🚀 Setting up Claude Code, Codex, and MCP servers..."
 
+# Get the directory where this script is located
+SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
+
 # Install Python tools
-pip install pipx
-pipx ensurepath
-export PATH="$PATH:/home/vscode/.local/bin"
+pip install --user pipx 2>/dev/null || python3 -m pip install --user pipx
+export PATH="$PATH:$HOME/.local/bin"
+python3 -m pipx ensurepath
 
 # Install UV for Python package management
 curl -LsSf https://astral.sh/uv/install.sh | sh
 source $HOME/.cargo/env
 
 # Install Claude Code and Codex CLIs
-npm install -g @anthropic/claude-code
-npm install -g @openai/codex
+echo "📦 Installing Claude Code and Codex CLIs..."
+npm install -g @anthropic/claude-code 2>/dev/null || echo "⚠️ Claude Code CLI installation failed"
+npm install -g @openai/codex 2>/dev/null || echo "⚠️ Codex CLI installation failed"
 
 # Install Playwright browsers for headless automation
 npx playwright install chromium
 
 # --- CLAUDE AUTHENTICATION ---
-cp .devcontainer/claude-template.json ~/.claude.json
+mkdir -p ~/.claude 2>/dev/null
+cp "$SCRIPT_DIR/claude-template.json" ~/.claude.json
 
 # Replace placeholders with GitHub Secrets if they exist
 if [ -n "$CLAUDE_ACCOUNT_UUID" ]; then
@@ -55,7 +60,7 @@ fi
 
 # --- CODEX AUTHENTICATION ---
 mkdir -p ~/.codex
-cp .devcontainer/codex-auth-template.json ~/.codex/auth.json
+cp "$SCRIPT_DIR/codex-auth-template.json" ~/.codex/auth.json
 
 if [ -n "$CODEX_ID_TOKEN" ]; then
   # Escape special characters in tokens for sed

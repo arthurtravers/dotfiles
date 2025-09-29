@@ -11,9 +11,27 @@ if [ "$CODESPACES" != "true" ]; then
     exit 0
 fi
 
+# Find the dotfiles directory (it can be in different locations)
+if [ -d "/workspaces/.codespaces/.persistedshare/dotfiles" ]; then
+    DOTFILES_DIR="/workspaces/.codespaces/.persistedshare/dotfiles"
+elif [ -d "$HOME/dotfiles" ]; then
+    DOTFILES_DIR="$HOME/dotfiles"
+elif [ -d "$(dirname "$0")" ]; then
+    # Use the directory where this script is located
+    DOTFILES_DIR="$(cd "$(dirname "$0")" && pwd)"
+else
+    echo "❌ Cannot find dotfiles directory!"
+    echo "   Searched: /workspaces/.codespaces/.persistedshare/dotfiles"
+    echo "   Searched: $HOME/dotfiles"
+    echo "   Searched: $(dirname "$0")"
+    exit 1
+fi
+
+echo "📁 Using dotfiles from: $DOTFILES_DIR"
+
 # Run our setup script directly from dotfiles
 echo "🎯 Running setup script..."
-bash ~/dotfiles/codespace-config/setup.sh
+bash "$DOTFILES_DIR/codespace-config/setup.sh"
 
 # Install VSCode extensions if code CLI is available
 if command -v code &> /dev/null; then
