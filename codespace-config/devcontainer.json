@@ -1,0 +1,15 @@
+{
+  "name": "Dev with Claude Code, Codex & MCP",
+  "image": "mcr.microsoft.com/devcontainers/python:3.11-node",
+
+  "features": {
+    "ghcr.io/devcontainers/features/github-cli:1": {},
+    "ghcr.io/devcontainers/features/python:1": {}
+  },
+
+  "postCreateCommand": "bash .devcontainer/setup.sh",
+
+  "forwardPorts": [3000, 3001, 5173, 8080, 8000],
+
+  "remoteUser": "vscode"
+}
