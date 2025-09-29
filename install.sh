@@ -43,6 +43,9 @@ if command -v code &> /dev/null; then
     code --install-extension github.copilot 2>/dev/null || true
     code --install-extension github.copilot-chat 2>/dev/null || true
 
+    # Testing & Automation
+    code --install-extension ms-playwright.playwright 2>/dev/null || true
+
     # Core Development Extensions
     code --install-extension esbenp.prettier-vscode 2>/dev/null || true
     code --install-extension dbaeumer.vscode-eslint 2>/dev/null || true

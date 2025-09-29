@@ -118,6 +118,7 @@ When you create ANY GitHub Codespace with this dotfiles setup:
 - **ChatGPT**: OpenAI's official extension
 - **GitHub Copilot**: AI autocomplete as you type
 - **GitHub Copilot Chat**: Ask questions about code
+- **Playwright Test**: Run and debug E2E tests
 
 ### MCP Servers Included
 

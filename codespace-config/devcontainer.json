@@ -23,6 +23,9 @@
         "github.copilot",                  // GitHub Copilot
         "github.copilot-chat",             // GitHub Copilot Chat
 
+        // Testing & Automation
+        "ms-playwright.playwright",        // Playwright Test for VS Code
+
         // Development Tools
         "esbenp.prettier-vscode",          // Code formatter
         "dbaeumer.vscode-eslint",          // JavaScript linter
